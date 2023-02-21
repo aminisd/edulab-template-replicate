@@ -1,1 +1,181 @@
 /* Main Stylesheet*/
+
+/* responsive navbar css part */
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400&family=Courgette&family=Fredoka+One&family=Kaushan+Script&family=Lobster&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,400;1,500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #ffff;
+  box-shadow: 0 4px 2px -0px #777;
+}
+
+nav .navbar {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 50px;
+}
+nav .navbar .logo a {
+  color: #100909;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav .navbar .nav-links {
+  height: 100%;
+  line-height: 70px;
+}
+nav .navbar .nav-links .links {
+  display: flex;
+}
+nav .navbar .nav-links .links li {
+  list-style-type: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0 14px;
+}
+nav .navbar .nav-links .links li a {
+  height: 100%;
+  color: #030101;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+nav .navbar .nav-links .links li .arrow {
+  height: 100%;
+  width: 22px;
+  text-align: center;
+  line-height: 70px;
+  color: #090808;
+  transition: all 0.3s ease;
+}
+
+/* hover for the 2 arrows of navbar */
+nav .navbar .nav-links .links li:hover .courses-arrow,
+nav .navbar .nav-links .links li:hover .news-arrow {
+  transform: rotate(180deg);
+}
+.navbar .nav-links .links .sub-menu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  line-height: 40px;
+  border-radius: 0 0 4px 4px;
+
+  display: none;
+  opacity: 3;
+}
+.navbar .nav-links .links .sub-menu li {
+  padding: 0 45px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.navbar .nav-links .links .sub-menu li a {
+  font-size: 15px;
+  font: 500;
+}
+.navbar .nav-links .links .sub-menu li .blog-arrow {
+  line-height: 40px;
+}
+
+/* hover for the submenu of navbar */
+.navbar .nav-links .links li:hover .courses-sub-menu,
+.navbar .nav-links .links li:hover .news-sub-menu {
+  display: block;
+  z-index: 10;
+}
+.navbar .nav-links .links .blog:hover .blog-sub-menu {
+  display: block;
+  z-index: 9000;
+}
+.navbar .nav-links .links .blog .blog-sub-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  border-radius: 0 4px 4px 4px;
+  display: none;
+}
+.navbar .nav-links .links .courses-sub-menu li:hover {
+  background-color: grey;
+}
+.navbar .nav-links .links .news-sub-menu li:hover {
+  background-color: grey;
+}
+
+/* hamburger menu bar for the navbar */
+nav .navbar .hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  background-color: rgb(16, 14, 14);
+}
+nav .navbar .hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+/* begining of media querries */
+@media screen and (max-width: 890px) {
+  nav .navbar .nav-links .links li a {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav .navbar .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  nav .navbar .nav-links.active {
+    position: fixed;
+    height: 26rem;
+    top: 4rem;
+    width: 100%;
+    left: 0;
+    background-color: #fff;
+  }
+  nav .navbar .nav-links {
+    position: fixed;
+    top: -100%;
+    flex-direction: column;
+    width: 100%;
+    transition: 0.8s ease-in-out;
+    left: -0.01%;
+  }
+  nav .navbar .links {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
