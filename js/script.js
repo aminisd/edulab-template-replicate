@@ -2,14 +2,15 @@
 
 // responsive navbar javascript part
 const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-links");
+const navMenu = document.querySelector(".toggle");
 
 hamburger.addEventListener("click", () => {
+
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 });
 
-document.querySelectorAll(".nav-link").forEach((n) =>
+document.querySelectorAll(".nav-item").forEach((n) =>
   n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
