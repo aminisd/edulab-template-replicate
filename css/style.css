@@ -252,23 +252,22 @@ nav .navbar .hamburger {
    
 }
 
-.img-contenair{
-  width: 100%;
-  margin: auto;
-  /* overflow: hidden; */
-}
+/* slider  */
 
-.list-slides{
+.place-image{
   display: flex;
-  width:100%;
-  height: 600px;
-  
+  flex-direction: row;
+  overflow: hidden; 
+  height: 100%;
+  width: 100%;
 }
 
-#place-image{
-  width: inherit;
+.img{
+  height: 70%;
+  width: 100%;
+  transition: all 0.25s ease-in-out;
 }
-  
+
 
 #btn-left{
   position: absolute;
@@ -307,118 +306,119 @@ nav .navbar .hamburger {
 }
 
 
- @media screen and (max-width: 767px){
-  
-  #btn-left{
+@media screen and (max-width:320px){
+  .welcome{
     position: absolute;
-    top:72%;
+    top: 55%;
+    font-size: small;
   }
 
   .comments{
-    position: absolute;
-    top: 80%;
-    
-  }
-
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-  @media screen and (max-width: 1700px ){ 
-  
-    #btn-left{
-    position: absolute;
-    top: 40%;
-  }
-    
-  #btn-right{
-    position: absolute;
-    top: 40%;
-  }  
-
-  .welcome{
-    display: block;
-    top: 40%;
-    padding-left: 85px;
-  }
-
-  .comments{
-    position: absolute;
-    top: 50%;
-    padding-left: 85px;
-  }
-
-
-}    
-
-
-@media screen and (max-width: 760px ){
-
-  #btn-left{
-    position: absolute;
-    top: 65%;
-  }
-
-  #btn-right{
-    position: absolute;
-    top: 65%;
-  }
-
-  .welcome{
     position: absolute;
     top: 60%;
-    padding-left: 6px;
+    font-size: 7px;
+    padding-left: 2px;
+  }
+
+  #btn-right{
+    position: absolute;
+    top: 320px;
+    font-size: 20px;
+  }
+
+  #btn-left{
+    position: absolute;
+    top: 320px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width:375px){
+  .welcome,.comments{
+    font-size: 10px;
   }
 
   .comments{
     position: absolute;
-    top: 70%;
+    top: 360px;
+  
+  }
+
+  .welcome{
+    padding-left: 5px;
+  }
+
+  #btn-left{
+    position: absolute;
+    top: 350px;
+    font-size: 15px;
+  }
+
+  #btn-right{
+    position: absolute;
+    top: 350px;
+    font-size: 15px;
+  }
+}
+
+
+@media screen and (max-width:320px){
+  .comments{
+    position: absolute;
+    top: 58%;
+    font-size: 7px;
+  }
+
+  #btn-left,
+  #btn-right{
+    position: absolute;
+    top: 320px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width:768px){
+  .comments,.welcome{
+    font-size: 30px;
+  }
+
+  .comments{
     font-size: 20px;
-    padding-left: 0px;
+    padding-left: 1px;
+  }
+
+
+  #btn-left,
+  #btn-right{
+    position: absolute;
+    top: 370px;
+    font-size: 20px;
   }
 
 
 }
 
-@media screen and (max-width:820){
-  .welcome{
+
+@media screen and (max-width:1024px){
+  .comments,.welcome{
     position: absolute;
-    top: 38%;
-    padding-left: 4px;
+    top: 350px;
   }
 
   .comments{
-    position: absolute;
-    top: 44%;
-    font-size: medium;
-    padding-left: 48px;
+    top: 410px;
+    padding-left: 1px;
   }
 
-} */
+  #btn-left,
+  #btn-right{
+    position: absolute;
+    top: 390px;
+    font-size: 30px;
+  }
 
 
+}
 
 
 
