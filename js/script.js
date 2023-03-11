@@ -29,14 +29,14 @@ const nextBtn = document.querySelector("#nextBtn");
 
 let counter = 1;
 
-let size = carouselImages[0].clientWidth;
-carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+// let size = carouselImages[0].clientWidth;
+// carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
 
-window.addEventListener("resize", () => {
-  carouselSlide.style.transition = "none";
-  size = carouselImages[0].clientWidth;
-  carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-});
+// window.addEventListener("resize", () => {
+//   carouselSlide.style.transition = "none";
+//   size = carouselImages[0].clientWidth;
+//   carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+// });
 // Button Listeners
 
 nextBtn.addEventListener("click", () => {
