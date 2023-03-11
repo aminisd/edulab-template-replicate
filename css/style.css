@@ -142,7 +142,7 @@ nav .navbar .hamburger {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   nav .navbar .hamburger {
     display: block;
   }
@@ -297,7 +297,8 @@ nav .navbar .hamburger {
   font-size: 25px;
   color: white;
 }
-.slider-text h1,p {
+.slider-text h1,
+p {
   text-align: center;
 }
 
@@ -335,6 +336,15 @@ nav .navbar .hamburger {
   }
 }
 
+@media screen and (max-width: 769px) {
+  .slider-text {
+    margin-top: 90px;
+  }
+  #prevBtn img,
+  #nextBtn img {
+    margin-top: 140px;
+  }
+}
 @media screen and (max-width: 426px) {
   .slider-text h1 {
     font-size: 18px;
@@ -343,5 +353,13 @@ nav .navbar .hamburger {
   .slider-text p {
     font-size: 13px;
     text-align: center;
+  }
+
+  .slider-text {
+    margin-top: 170px;
+  }
+  #prevBtn img,
+  #nextBtn img {
+    margin-top: 190px;
   }
 }
