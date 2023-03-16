@@ -17,6 +17,7 @@ nav {
   height: 70px;
   background-color: #ffff;
   box-shadow: 0 4px 2px -0px #777;
+
 }
 
 nav .navbar {
@@ -190,6 +191,7 @@ nav .navbar .hamburger {
   width: 100%;
   padding: 25px;
   background-color: rgba(7, 7, 66, 0.959);
+
 }
 
 .lis-logos ul li{
@@ -265,7 +267,8 @@ nav .navbar .hamburger {
 .img{
   height: 70%;
   width: 100%;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.50s ease-in-out;
+  min-width: 100%;
 }
 
 
@@ -277,6 +280,7 @@ nav .navbar .hamburger {
   font-size: 30px;
   color: white;
   cursor: pointer;
+  
 }
 
 #btn-right{
@@ -287,6 +291,7 @@ nav .navbar .hamburger {
   font-size: 30px;
   color: white;
   cursor: pointer;
+  min-width: 2%;
 }
 
 .welcome{
@@ -303,6 +308,7 @@ nav .navbar .hamburger {
   z-index: 10;
   left: 18%;
   color: white;
+  
 }
 
 
@@ -420,6 +426,17 @@ nav .navbar .hamburger {
 
 }
 
+
+/*  Popular Courses  */
+
+.course{
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 3%;
+  
+ 
+}
 
 
 
