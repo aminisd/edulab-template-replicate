@@ -187,21 +187,26 @@ sliderItems = document.getElementById('slides'),
 prev = document.getElementById('prev'),
 next = document.getElementById('next');
 
+var slideSize = document.getElementsByClassName('wrapper')[0].offsetWidth,
+posInitial,
+index = 0;
+
 function slide(wrapper, items, prev, next) {
 var posX1 = 0,
   posX2 = 0,
-  posInitial,
   posFinal,
   threshold = 100,
   slides = items.getElementsByClassName('slide'),
   slidesLength = slides.length,
-  slideSize = document.getElementsByClassName('wrapper')[0].offsetWidth,
+  // slideSize =  = document.getElementsByClassName('wrapper')[0].offsetWidth,
   firstSlide = slides[0],
   lastSlide = slides[slidesLength - 1],
   cloneFirst = firstSlide.cloneNode(true),
   cloneLast = lastSlide.cloneNode(true),
-  index = 0,
+  
   allowShift = true;
+
+  console.log(slideSize)
 
 // Clone first and last slide
 items.appendChild(cloneFirst);
@@ -270,6 +275,8 @@ document.onmousemove = null;
 function shiftSlide(dir, action) {
 items.classList.add('shifting');
 
+console.log(posInitial)
+
 if (allowShift) {
   if (!action) { posInitial = items.offsetLeft; }
 
@@ -307,18 +314,16 @@ slide(slider, sliderItems, prev, next);
 
 function setWidth(){
 
-
-var slider = document.getElementById('slider');
-
-var wrapper = document.getElementsByClassName('wrapper');
-
 var slides = document.getElementsByClassName('slide');
+
+slideSize = document.getElementsByClassName('wrapper')[0].offsetWidth;
 
 
 Array.from(slides).forEach((item) => {
-item.style.width = wrapper[0].offsetWidth+ "px";
+item.style.width = slideSize + "px";
 
 });
+
 
 // slider.style.left = -(wrapper[0].offsetWidth)+'px';
 }
