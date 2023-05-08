@@ -320,10 +320,9 @@ slideSize = document.getElementsByClassName('wrapper')[0].offsetWidth;
 
 
 Array.from(slides).forEach((item) => {
-item.style.width = slideSize + "px";
-
+  item.style.width = slideSize + "px";
 });
-
+document.getElementById("slides").style.left = -(slideSize) + "px";
 
 // slider.style.left = -(wrapper[0].offsetWidth)+'px';
 }
