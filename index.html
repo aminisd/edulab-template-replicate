@@ -71,61 +71,58 @@
       </div>
     </div>
 
-    <div>
+    <!-- navbar begins -->
+    <header class="Navheader">
+      <a href="#" class="logo"> <img src="./assets/img/site-logo.jpg" alt="logo"></a>
       <nav>
-        <div class="navbar">
-          <div class="logo">
+        <ul>
+          <li class="nav-links"><a href="#">Home</a></li>
+          <li>
             <a href="#"
-              ><img src="./assets/img/site-logo.jpg" width="100" height="40"
-            /></a>
-          </div>
-          <div class="nav-links">
-            <ul class="links">
+              >Courses <b><i class="fa-solid fa-angle-down"></i></b
+            ></a>
+            <ul>
+              <li class="nav-links"><a href="#">List</a></li>
+              <li class="nav-links"><a href="#">Single</a></li>
               <li>
-                <a href="#" class="nav-link">Home</a>
-              </li>
-              <li>
-                <a href="#">Courses</a>
-                <i class="bx bxs-chevron-down arrow courses-arrow"></i>
-                <ul class="courses-sub-menu sub-menu">
-                  <li><a href="#" class="nav-link">List</a></li>
-                  <li><a href="#" class="nav-link">Single</a></li>
-                  <li class="blog">
-                    <a href="#">blog</a>
-                    <i class="bx bxs-chevron-right arrow blog-arrow"></i>
-                    <ul class="blog-sub-menu sub-menu">
-                      <li><a href="#" class="nav-link">Overview</a></li>
-                      <li><a href="#" class="nav-link">Single Post</a></li>
-                    </ul>
-                  </li>
+                <a href="#"
+                  >Blog <b><i class="fa-solid fa-angle-right"></i></b
+                ></a>
+
+                <ul>
+                  <li class="nav-links"><a href="#">Overview</a></li>
+                  <li class="nav-links"><a href="#">Single Post</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="#">News</a>
-                <i class="bx bxs-chevron-down arrow news-arrow"></i>
-                <ul class="news-sub-menu sub-menu">
-                  <li><a href="#" class="nav-link">Child</a></li>
-                  <li><a href="#" class="nav-link">Child</a></li>
-                </ul>
-              </li>
-              <li><a href="#" class="nav-link">About</a></li>
-              <li><a href="#" class="nav-link">Gallery</a></li>
-              <li><a href="#" class="nav-link">Contact</a></li>
             </ul>
-          </div>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </div>
+          </li>
+          <li>
+            <a href="#"
+              >News <b> <i class="fa-solid fa-angle-down"></i></b
+            ></a>
+            <ul>
+              <li class="nav-links"><a href="#">Child</a></li>
+              <li class="nav-links"><a href="#">Child</a></li>
+            </ul>
+          </li>
+          <li class="nav-links"><a href="#">About</a></li>
+          <li class="nav-links"><a href="#">Gallery</a></li>
+          <li class="nav-links"><a href="#">Contact</a></li>
+        </ul>
       </nav>
-    </div>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </header>
+
+    <!-- navbar ends -->
 
     <div id="slider" class="slider">
       <div class="wrapper">
         <div id="slides" class="slides">
-
           <div class="slide">
             <h2>Slider 1</h2>
             <span>Span bellow</span>
@@ -135,13 +132,11 @@
             <h2>Slider 2</h2>
             <span>Span bellow</span>
           </div>
-          
+
           <div class="slide">
             <h2>Slider 3</h2>
             <span>Span bellow</span>
           </div>
-
-
         </div>
       </div>
       <a id="prev" class="control prev"></a>
@@ -149,6 +144,191 @@
     </div>
 
     <!-- Second Slider-->
+    
+    <!-- Second Slider-->
+    <section class="secondSlider">
+      <h2 class="courses-title">POPULAR COURSES</h2>
+      <div class="sliderWrapper">
+        <ul class="secondCarousel">
+          <li id="1" class="s-card">
+            <div class="img">
+              <img
+                src="./assets/img/course-pic.jpg"
+                alt="course1-img"
+                width="100%"
+              />
+            </div>
+            <a href="#" class="learnLink">1 Learn Web Designing>>></a>
+            <p class="card-lorem fivec">
+              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+              ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              Lorem ipsum Lorem ipsum
+            </p>
+            <div class="cardb-div">
+              <p class="cardDuration fivec">
+                <span class="fiveb">Duration: </span> 4 Years
+              </p>
+              <p class="cardTime fivec">
+                <span class="fiveb"> Class Time:</span> 6am-12am / 11am-5pm
+              </p>
+              <p class="cardFee fivec">
+                <span class="fiveb">Fee:</span>4,00,000
+              </p>
+            </div>
+          </li>
+          <!-- second card -->
+          <li class="s-card">
+            <div class="img">
+              <img
+                src="./assets/img/course-pic.jpg"
+                alt="course1-img"
+                width="100%"
+                draggable="false"
+              />
+            </div>
+            <a href="#" class="learnLink">Learn Web Designing>>></a>
+            <p class="card-lorem fivec">
+              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+              ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              Lorem ipsum Lorem ipsum
+            </p>
+            <div class="cardb-div">
+              <p class="cardDuration fivec">
+                <span class="fiveb">Duration: </span> 4 Years
+              </p>
+              <p class="cardTime fivec">
+                <span class="fiveb"> Class Time:</span> 6am-12am / 11am-5pm
+              </p>
+              <p class="cardFee fivec">
+                <span class="fiveb">Fee:</span>4,00,000
+              </p>
+            </div>
+          </li>
+          <!-- third card -->
+          <li class="s-card">
+            <div class="img">
+              <img
+                src="./assets/img/course-pic.jpg"
+                alt="course1-img"
+                width="100%"
+                draggable="false"
+              />
+            </div>
+            <a href="#" class="learnLink">Learn Web Designing>>></a>
+            <p class="card-lorem fivec">
+              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+              ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              Lorem ipsum Lorem ipsum
+            </p>
+            <div class="cardb-div">
+              <p class="cardDuration fivec">
+                <span class="fiveb">Duration: </span> 4 Years
+              </p>
+              <p class="cardTime fivec">
+                <span class="fiveb"> Class Time:</span> 6am-12am / 11am-5pm
+              </p>
+              <p class="cardFee fivec">
+                <span class="fiveb">Fee:</span>4,00,000
+              </p>
+            </div>
+          </li>
+          <!-- fouth card -->
+          <li class="s-card">
+            <div class="img">
+              <img
+                src="./assets/img/course-pic.jpg"
+                alt="course1-img"
+                width="100%"
+                draggable="false"
+              />
+            </div>
+            <a href="#" class="learnLink">Learn Web Designing>>></a>
+            <p class="card-lorem fivec">
+              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+              ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              Lorem ipsum Lorem ipsum
+            </p>
+            <div class="cardb-div">
+              <p class="cardDuration fivec">
+                <span class="fiveb">Duration: </span> 4 Years
+              </p>
+              <p class="cardTime fivec">
+                <span class="fiveb"> Class Time:</span> 6am-12am / 11am-5pm
+              </p>
+              <p class="cardFee fivec">
+                <span class="fiveb">Fee:</span>4,00,000
+              </p>
+            </div>
+          </li>
+          <!-- fifth card -->
+          <li class="s-card">
+            <div class="img">
+              <img
+                src="./assets/img/course-pic.jpg"
+                alt="course1-img"
+                width="100%"
+                draggable="false"
+              />
+            </div>
+            <a href="#" class="learnLink">Learn Web Designing>>></a>
+            <p class="card-lorem fivec">
+              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+              ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              Lorem ipsum Lorem ipsum
+            </p>
+            <div class="cardb-div">
+              <p class="cardDuration fivec">
+                <span class="fiveb">Duration: </span> 4 Years
+              </p>
+              <p class="cardTime fivec">
+                <span class="fiveb"> Class Time:</span> 6am-12am / 11am-5pm
+              </p>
+              <p class="cardFee fivec">
+                <span class="fiveb">Fee:</span>4,00,000
+              </p>
+            </div>
+          </li>
+
+          <!-- 6th -->
+          <li class="6th s-card">
+            <div class="img">
+              <img
+                src="./assets/img/course-pic.jpg"
+                alt="course1-img"
+                width="100%"
+                draggable="false"
+              />
+            </div>
+            <a href="#" class="learnLink">6 Learn Web Designing>>></a>
+            <p class="card-lorem fivec">
+              Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+              ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              Lorem ipsum Lorem ipsum
+            </p>
+            <div class="cardb-div">
+              <p class="cardDuration fivec">
+                <span class="fiveb">Duration: </span> 4 Years
+              </p>
+              <p class="cardTime fivec">
+                <span class="fiveb"> Class Time:</span> 6am-12am / 11am-5pm
+              </p>
+              <p class="cardFee fivec">
+                <span class="fiveb">Fee:</span>4,00,000
+              </p>
+            </div>
+          </li>
+        </ul>
+        <div class="s-controlBtns">
+          <div id="left" class="s-btnLeft btnSlide">
+            <i class="fa-solid fa-chevron-left btc-icon"></i>
+          </div>
+          <div class="btn-line"></div>
+          <div id="right" class="s-btnRight btnSlide">
+            <i class="fa-solid fa-chevron-right btc-icon"></i>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- about us -->
 
     <section class="why-us-section">
@@ -191,83 +371,69 @@
 
     <!-- about us end -->
 
-
     <!--  Gallery start  -->
 
-    <section class="father-gallery"  >
-
+    <section class="father-gallery">
       <div class="post">
-         <h3>GALLERY</h3>
+        <h3>GALLERY</h3>
       </div>
 
-      <div class="mother-gallery" >
-
+      <div class="mother-gallery">
         <div class="child-gallery">
-
-                
-              <div class="gallery-image" >
-                <img src="/assets/img/gallery-img1.jpg">
-              </div>
-              <div class="gallery-image">
-                <img src="/assets/img/gallery-img2.jpg">
-              </div>
-              <div class="gallery-image">
-                <img src="/assets/img/gallery-img3.jpg">
-              </div>
-              <div class="gallery-image">
-                <img src="/assets/img/gallery-img4.jpg">
-              </div>
-              <div class="gallery-image">
-                <img src="/assets/img/gallery-img5.jpg">
-              </div>
-              <div class="gallery-image">
-                <img src="/assets/img/gallery-img6.jpg">
-              </div>
-              <div class="gallery-image">
-                <img src="/assets/img/gallery-img7.jpg">
-              </div>
-              <div class="gallery-image">
-                <img src="/assets/img/gallery-img8.jpg">
-              </div>
-              <div class="gallery-image">
-                <img src="/assets/img/gallery-img9.jpg">
-              </div>
-              <div class="gallery-image">
-                <img src="/assets/img/gallery-img10.jpg">
-              </div>
-              <div class="gallery-image">
-                <img src="/assets/img/gallery-img11.jpg">
-              </div>
-              <div class="gallery-image">
-                <img src="/assets/img/gallery-img12.jpg">
-              </div>
-
+          <div class="gallery-image">
+            <img src="/assets/img/gallery-img1.jpg" />
+          </div>
+          <div class="gallery-image">
+            <img src="/assets/img/gallery-img2.jpg" />
+          </div>
+          <div class="gallery-image">
+            <img src="/assets/img/gallery-img3.jpg" />
+          </div>
+          <div class="gallery-image">
+            <img src="/assets/img/gallery-img4.jpg" />
+          </div>
+          <div class="gallery-image">
+            <img src="/assets/img/gallery-img5.jpg" />
+          </div>
+          <div class="gallery-image">
+            <img src="/assets/img/gallery-img6.jpg" />
+          </div>
+          <div class="gallery-image">
+            <img src="/assets/img/gallery-img7.jpg" />
+          </div>
+          <div class="gallery-image">
+            <img src="/assets/img/gallery-img8.jpg" />
+          </div>
+          <div class="gallery-image">
+            <img src="/assets/img/gallery-img9.jpg" />
+          </div>
+          <div class="gallery-image">
+            <img src="/assets/img/gallery-img10.jpg" />
+          </div>
+          <div class="gallery-image">
+            <img src="/assets/img/gallery-img11.jpg" />
+          </div>
+          <div class="gallery-image">
+            <img src="/assets/img/gallery-img12.jpg" />
+          </div>
         </div>
-
       </div>
 
       <div class="popup-image">
-        <img src="/assets/img/gallery-img1.jpg">
+        <img src="/assets/img/gallery-img1.jpg" />
         <span>&times;</span>
-       
-        <i class="fa-solid fa-angle-right" id="btn-right"></i> 
+
+        <i class="fa-solid fa-angle-right" id="btn-right"></i>
         <i class="fa-solid fa-chevron-left" id="btn-left"></i>
-        
-
-
       </div>
-
-
     </section>
 
     <!--  Gallery End  -->
-    
+
     <section class="upcoming-events">
       <h3>UPCOMMING EVENTS</h3>
       <div class="upcoming-nested">
         <div class="img-container">
-          <img src="../assets/img/events.jpg" />
-
           <div class="img-content nested-upcontent">
             <h3>Orientation Programme for new Students</h3>
             <p>
@@ -286,8 +452,6 @@
         </div>
 
         <div class="img-container">
-          <img src="../assets/img/events.jpg" />
-
           <div class="img-content nested-upcontent">
             <h3>Orientation Programme for new Students</h3>
             <p>
@@ -307,30 +471,125 @@
       </div>
     </section>
 
+<!-- upcoming event ends -->
     <section class="what-other-say">
       <h3 class="get-to-know">Get to Know</h3>
       <h2 class="custo-subtitle">WHAT OUR CUSTOMER SAY</h2>
       <div class="div-bord"></div>
       <div class="other-say-container">
-       
-      
         <!-- next and prev -->
       </div>
       <div class="prev-button buttons">
         <i class="fa-solid fa-chevron-left btn-left"></i>
       </div>
-      <div class="next-button buttons ">
+      <div class="next-button buttons">
         <i class="fa-solid fa-chevron-right btn-right"></i>
       </div>
     </section>
-    <h2>Latest News</h2>
+   
+    <!-- latest News begings -->
 
-    <div>
-      <div>news 1</div>
+    <section class="lastSlider">
+      <h2 class="latest-title">Latest News</h2>
+      <div class="lastSliderWrapper">
+        <ul class="lastCarousel">
+          <li id="" class="latest-card">
+            <div>
+              <img
+                src="./assets/img/latest-new-img.jpg"
+                alt="course1-img"
+                width="100%"
+                draggable="false"
+              />
+            </div>
 
-      <div>new 2</div>
-    </div>
+            <div class="latestDiv">
+              <p class="orientation">Orientation Programme for new students.</p>
+              <p class="orientationDate">By Admin | 20 Dec. 2045</p>
+              <p class="orientationText">
+                Orientation programme for new sffs students. Orientatin
+                Programmes<br />
+                for new Students.. Orientatin Programmes for new Students
+              </p>
+            </div>
+          </li>
+          <li id="" class="latest-card">
+            <div>
+              <img
+                src="./assets/img/latest-new-img.jpg"
+                alt="course1-img"
+                width="100%"
+                draggable="false"
+              />
+            </div>
 
+            <div class="latestDiv">
+              <p class="orientation">Orientation Programme for new students.</p>
+              <p class="orientationDate">By Admin | 20 Dec. 2045</p>
+              <p class="orientationText">
+                Orientation programme for new sffs students. Orientatin
+                Programmes<br />
+                for new Students.. Orientatin Programmes for new Students
+              </p>
+            </div>
+          </li>
+
+          <!-- 3rd -->
+          <li id="" class="latest-card">
+            <div>
+              <img
+                src="./assets/img/latest-new-img.jpg"
+                alt="course1-img"
+                width="100%"
+                draggable="false"
+              />
+            </div>
+
+            <div class="latestDiv">
+              <p class="orientation">Orientation Programme for new students.</p>
+              <p class="orientationDate">By Admin | 20 Dec. 2045</p>
+              <p class="orientationText">
+                Orientation programme for new sffs students. Orientatin
+                Programmes<br />
+                for new Students.. Orientatin Programmes for new Students
+              </p>
+            </div>
+          </li>
+          <li id="" class="latest-card">
+            <div>
+              <img
+                src="./assets/img/latest-new-img.jpg"
+                alt="course1-img"
+                width="100%"
+                draggable="false"
+              />
+            </div>
+
+            <div class="latestDiv">
+              <p class="orientation">Orientation Programme for new students.</p>
+              <p class="orientationDate">By Admin | 20 Dec. 2045</p>
+              <p class="orientationText">
+                Orientation programme for new sffs students. Orientatin
+                Programmes<br />
+                for new Students.. Orientatin Programmes for new Students
+              </p>
+            </div>
+          </li>
+        </ul>
+        <div class="latestBtns">
+          <div id="left" class="latestLeft latestSlideBtn">
+            <i class="fa-solid fa-chevron-left btn-icon"></i>
+          </div>
+          <div class="btn-line"></div>
+          <div id="right" class="latestRight latestSlideBtn">
+            <i class="fa-solid fa-chevron-right btn-icon"></i>
+           
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- latest News ends -->
     <div class="footer">
       <div class="top-footer">
         <p class="query">Any Queries? Ask us a question at</p>
