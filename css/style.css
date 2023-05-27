@@ -18,8 +18,7 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 999;
-  background: #2e3192;
-  color: #fff;
+  color: black;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
@@ -40,7 +39,7 @@ header ul li {
 }
 
 header ul li a {
-  color: #fff;
+  color: black;
   font-size: 1.1em;
   padding: 20px 18px;
   text-decoration: none;
@@ -221,20 +220,20 @@ header ul li ul li ul {
 
 /* slider  */
 
-.place-image {
+ .place-image {
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  height: 100%;
-  width: 100%;
-}
+   height: 100%;
+  width: 100%; 
+} 
 
-.img {
+ /* .img {
   height: 70%;
   width: 100%;
   transition: all 0.5s ease-in-out;
   min-width: 100%;
-}
+}  */
 
 #btn-lefte {
   position: absolute;
@@ -1934,7 +1933,8 @@ textarea {
 }
 
 .gallery-image:hover {
-  transform: scale(1.1);
+  filter: brightness(45%);
+  transition: all 1s ease 0s;
 }
 
 .popup-image {
@@ -2041,14 +2041,14 @@ textarea {
 	 left: 50%;
 	 transform: translate(-50%, -50%); */
   width: 100%;
-  height: 300px;
+  height: 500px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 .wrapper {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 500px;
   z-index: 1;
 }
 .slides {
@@ -2062,7 +2062,7 @@ textarea {
   transition: left 0.2s ease-out;
 }
 .slide {
-  height: 300px;
+  height: 500px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -2115,9 +2115,27 @@ textarea {
   }
 }
 
-.slide {
+ .slide {
   background-image: url("../assets/img/page-banner.jpg");
   background-size: cover;
   background-position: 50% 50%;
   color: #ffffff;
+} 
+
+
+.slide h2{
+  font-weight: bold;
+  font-size: 45px;
+  letter-spacing: -2px;
+  
 }
+
+.slide span{
+
+  font-weight: 100;
+  font-size: 20px;
+  color: white;
+  letter-spacing: -1px;
+}
+
+/*  slider complete */
