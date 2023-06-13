@@ -165,21 +165,27 @@ leftgal.addEventListener("click", function () {
 // Slider JS
 // Modified cconceicao's slider (Amini Version )
 
-var slider = document.getElementById("slider"),
+var slider = document.getElementById("slider"), // i am taking This later 
   sliderItems = document.getElementById("slides"),
   prev = document.getElementById("prev"),
   next = document.getElementById("next");
 
+  
+
+
 var slideSize = document.getElementsByClassName("wrapper")[0].offsetWidth,
-  posInitial,
-  index = 0;
+
+posInitial,
+index = 0;
+//console.log(slideSize)
 
 function slide(wrapper, items, prev, next) {
   var posX1 = 0,
     posX2 = 0,
     posFinal,
-    threshold = 100,
+    threshold = 100, 
     slides = items.getElementsByClassName("slide"),
+
     slidesLength = slides.length,
     // slideSize =  = document.getElementsByClassName('wrapper')[0].offsetWidth,
     firstSlide = slides[0],
@@ -188,12 +194,14 @@ function slide(wrapper, items, prev, next) {
     cloneLast = lastSlide.cloneNode(true),
     allowShift = true;
 
-  console.log(slideSize);
+
+ // console.log(slideSize);
 
   // Clone first and last slide
   items.appendChild(cloneFirst);
   items.insertBefore(cloneLast, firstSlide);
   wrapper.classList.add("loaded");
+ 
 
   // Mouse events
   items.onmousedown = dragStart;
@@ -206,11 +214,11 @@ function slide(wrapper, items, prev, next) {
   // Click events
   prev.addEventListener("click", function () {
     shiftSlide(-1);
-    console.log("prev");
+   
   });
   next.addEventListener("click", function () {
     shiftSlide(1);
-    console.log("next");
+    
   });
 
   // Transition events
@@ -267,6 +275,7 @@ function slide(wrapper, items, prev, next) {
     if (allowShift) {
       if (!action) {
         posInitial = items.offsetLeft;
+        console.log('sdfsdfsdf')
       }
 
       if (dir == 1) {
@@ -315,180 +324,397 @@ function setWidth() {
 
 window.addEventListener("resize", setWidth);
 
-// second slider //POPULAR COURSES (Musa)
-const sliderWrapper = document.querySelector(".sliderWrapper");
-const secondCarousel = document.querySelector(".secondCarousel");
-const btnSlide = document.querySelectorAll(".btnSlide");
-const firstCardWith = secondCarousel.querySelector(".s-card").offsetWidth;
-const secondCarouselChildrens = [...secondCarousel.children];
-let isDragging = false,
-  startX,
-  startScrollLeft,
-  timeoutId;
+// last slider pinhas 
 
-// get the number of cards that can fit in the carousel at once
-let cardPerView = Math.round(secondCarousel.offsetWidth / firstCardWith);
+var sliderPi = document.getElementById('slider_pi'),
+    sliderItemsPi = document.getElementById('slides_pi'),
+    prevPi = document.getElementById('right'),
+    nextPi  = document.getElementById('left');
 
-// Insert copies  of the last few cards to begining of carousel gor infinite scrolling
-secondCarouselChildrens
-  .slice(-cardPerView)
-  .reverse()
-  .forEach((card) => {
-    secondCarousel.insertAdjacentHTML("afterbegin", card.outerHTML);
-  });
 
-// Insert copies  of the first few cards to end of carousel for infinite scrolling
-secondCarouselChildrens.slice(0, cardPerView).forEach((card) => {
-  secondCarousel.insertAdjacentHTML("beforeend", card.outerHTML);
-});
+  var slidesizePi = document.getElementsByClassName('wrapper_pi')[0].offsetWidth,
+  posInitialPi,
+  indexPi=0;
 
-// Add event listeners for the arrow buttons to scroll the carousel left and right
-btnSlide.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    //tenary operator
-    secondCarousel.scrollLeft +=
-      btn.id === "left" ? -firstCardWith : firstCardWith;
-  });
-});
 
-const dragStart = (e) => {
-  isDragging = true;
-  secondCarousel.classList.add("dragging");
+function slidePi (wraper, itemss, prevv, nextt){
 
-  // Recordes the initial cursor and scroll position of the carousel
+  var posiX1pi = 0,
+    posiX2pi= 0,
+    posFinalPi,
+    thresholdPi = 100,
+    slidesPi = itemss.getElementsByClassName('slide_pi'),
+    
+    slidesLengthPi = slidesPi.length,
+    firstSlidePi = slidesPi[0],
+    lastSlidePi=slidesPi[slidesLengthPi - 1],
+    cloneFirstPi = firstSlidePi.cloneNode(true),
+    cloneLastPi = lastSlidePi.cloneNode(true),
+    allowShiftPi = true;
 
-  startX = e.pageX;
-  startScrollLeft = secondCarousel.scrollLeft;
-};
+    caretMesure = document.getElementsByClassName('carte')[0].offsetWidth + 30,
+   cartLenth = document.getElementsByClassName('carte').length;
+    
+  console.log(cartLenth)
 
-const dragging = (e) => {
-  if (!isDragging) return; //if isDragging is false return
-  secondCarousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-};
+    // clone fist and last 
 
-const dragStop = () => {
-  isDragging = false;
-  secondCarousel.classList.remove("dragging");
-};
+  itemss.appendChild(cloneFirstPi);
+  itemss.insertBefore(cloneLastPi,firstSlidePi);
+  wraper.classList.add('loaded')
 
-const autoPlay = () => {
-  if (window.innerWidth < 800) return;
 
-  timeoutId = setTimeout(() => {
-    secondCarousel.scrollLeft += firstCardWith;
-  }, 3000);
-};
-autoPlay();
-const infiniteScroll = () => {
-  // If the carousel is at the begining, scroll to the end
-  if (secondCarousel.scrollLeft === 0) {
-    secondCarousel.classList.add("no-transition");
-    secondCarousel.scrollLeft =
-      secondCarousel.scrollWidth - secondCarousel.offsetWidth;
-    secondCarousel.classList.remove("no-transition");
+  // All Mouse And EVENTS Here ...... START
+
+  // NOUSE event 
+
+  itemss.onmousedown = draStartPi;
+
+  //touch event 
+
+  itemss.addEventListener("touchstart", draStartPi);
+  itemss.addEventListener("touchend", dragEndPi);
+  itemss.addEventListener("touchmove", dragActionPi);
+
+
+  // All Mouse And EVENTS Here ...... END 
+
+
+  // event onclick 
+
+  prevv.addEventListener('click',function(){
+    shiftSlidePi(-1)
+
+  })
+
+  nextt.addEventListener('click', function(){
+    shiftSlidePi(1)
+ 
+
+  })
+
+  itemss.addEventListener('transitionend', checkindexPi);
+
+  setWidthPi();
+
+
+  function draStartPi(e){
+    e = e || window.event;
+
+    e.preventDefault();
+    posInitialPi= itemss.offsetLeft;
+
+    if ( e.type == 'touchstart'){
+      posiX1pi = e.touches[0].clientX;
+    }else{
+      posiX1pi = e.clientX;
+      document.onmouseup = dragEndPi;
+      document.onmousemove = dragActionPi;
+    }
   }
-  // If the carousel is at the end, scroll to the beginning
-  else if (
-    Math.ceil(secondCarousel.scrollLeft) ===
-    secondCarousel.scrollWidth - secondCarousel.offsetWidth
-  ) {
-    secondCarousel.classList.add("no-transition");
-    secondCarousel.scrollLeft = secondCarousel.offsetWidth;
-    secondCarousel.classList.remove("no-transition");
+
+
+  function dragActionPi(e){
+    e = e || window.event;
+
+      if (e.type == "touchmove"){
+      posiX2pi = posiX1pi - e.touches[0].clientX;
+      posiX1pi = e.touches[0].clientX;
+    } else {
+      posiX2pi = posiX1pi - e.clientX;
+      posiX1pi = e.clientX
+
+    }
+  
+    itemss.style.left = itemss.offsetLeft - posiX2pi + 'px'
   }
-  clearTimeout(timeoutId);
-  if (!sliderWrapper.matches(":hover")) autoPlay();
-};
 
-secondCarousel.addEventListener("mousedown", dragStart);
-secondCarousel.addEventListener("mousemove", dragging);
-document.addEventListener("mouseup", dragStop);
-secondCarousel.addEventListener("scroll", infiniteScroll);
-sliderWrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-sliderWrapper.addEventListener("mouseleave", autoPlay);
 
-// latest slider (last slider) Musa
-// latestSlideBtn
-const lastWrapper = document.querySelector(".lastSliderWrapper");
-const lastCarousel = document.querySelector(".lastCarousel");
-const latestSlideBtn = document.querySelectorAll(".latestSlideBtn");
-const cardWidth = lastCarousel.querySelector(".latest-card").offsetWidth;
-const lastCarouselChildrens = [...lastCarousel.children];
+function dragEndPi (e){
 
-let isLatestDragging = false,
-  startsX,
-  startsScrollLeft,
-  cleartimeoutId;
+  posFinalPi = itemss.offsetLeft;
 
-// get the number of cards that can fit in the carousel at once
-let cardPerViews = Math.round(lastCarousel.offsetWidth / cardWidth);
-
-// Insert copies  of the last few cards to begining of carousel gor infinite scrolling
-lastCarouselChildrens
-  .slice(-cardPerViews)
-  .reverse()
-  .forEach((card) => {
-    lastCarousel.insertAdjacentHTML("afterbegin", card.outerHTML);
-  });
-
-// Insert copies  of the first few cards to end of carousel for infinite scrolling
-lastCarouselChildrens.slice(0, cardPerViews).forEach((card) => {
-  lastCarousel.insertAdjacentHTML("beforeend", card.outerHTML);
-});
-
-// Add event listeners for the arrow buttons to scroll the carousel left and right
-latestSlideBtn.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    lastCarousel.scrollLeft += btn.id === "left" ? -cardWidth : cardWidth;
-  });
-});
-
-const latestDragStart = () => {
-  isLatestDragging = true;
-  lastCarousel.classList.add("dragging");
-  startsX = e.pageX;
-  startsScrollLeft = lastCarousel.scrollLeft;
-};
-const latestdragging = (e) => {
-  if (!isLatestDragging) return;
-  lastCarousel.scrollLeft = startsScrollLeft - (e.pageX - startsX);
-};
-const latestdragStop = () => {
-  isDragging = false;
-  lastCarousel.classList.remove("dragging");
-};
-
-// auto play
-const latestautoPlay = () => {
-  if (window.innerWidth < 800) return;
-
-  cleartimeoutId = setTimeout(() => {
-    lastCarousel.scrollLeft += cardWidth;
-  }, 3000);
-};
-autoPlay();
-const infinitesScroll = () => {
-  if (lastCarousel.scrollLeft === 0) {
-    lastCarousel.classList.add("no-transition");
-    lastCarousel.scrollLeft =
-      lastCarousel.scrollWidth - lastCarousel.offsetWidth;
-    lastCarousel.classList.remove("no-transition");
-  } else if (
-    Math.ceil(lastCarousel.scrollLeft) ===
-    lastCarousel.scrollWidth - lastCarousel.offsetWidth
-  ) {
-    lastCarousel.classList.add("no-transition");
-    lastCarousel.scrollLeft = lastCarousel.offsetWidth;
-    lastCarousel.classList.remove("no-transition");
+  if (posFinalPi - posInitialPi < - thresholdPi){
+    shiftSlidePi(1,'drag');
+  } else if (posFinalPi - posInitialPi > thresholdPi){
+    shiftSlidePi(-1, 'drag')
+  } else {
+    itemss.style.left = posInitialPi + 'px';
   }
-  clearTimeout(cleartimeoutId);
-  if (!lastWrapper.matches(":hover")) latestautoPlay();
-};
-lastCarousel.addEventListener("mousedown", latestDragStart);
-lastCarousel.addEventListener("mousemove", latestdragging);
-document.addEventListener("mousemove", latestdragStop);
-lastCarousel.addEventListener("scroll", infinitesScroll);
-lastWrapper.addEventListener("mouseenter", () => clearTimeout(cleartimeoutId));
-lastWrapper.addEventListener("mouseleave", autoPlay);
 
-// last slider ends
+  document.onmouseup = null;
+  document.onmousemove = null;
+}
+
+
+  function shiftSlidePi (dir, action){
+
+    itemss.classList.add('shifting')
+   
+    if (allowShiftPi){
+
+     
+      if (!action){
+        posInitialPi = itemss.offsetLeft;
+        console.log('sdfsdfsdf')
+   
+      }
+
+      if (dir == 1 ){
+        itemss.style.left = posInitialPi - caretMesure + 'px';
+        indexPi++;
+        console.log(posInitialPi ,'1')
+
+      } else if (dir == -1){
+        itemss.style.left= posInitialPi + caretMesure + 'px';
+        indexPi--;
+        console.log(posInitialPi, '-1')
+
+    
+      }
+    }
+    allowShiftPi = false
+  }
+
+ 
+
+  function checkindexPi (){
+    console.log('dimanche')
+    itemss.classList.remove('shifting');
+
+    if (indexPi == -1){
+      itemss.style.left = -( cartLenth  * slidesizePi) + 'px';
+      indexPi =  cartLenth  - 1;
+      console.log(indexPi)
+      
+    }
+
+
+    if (indexPi == cartLenth){
+      itemss.style.left = -(1 * slidesizePi) + 'px';
+      indexPi =0 
+      
+    }
+
+    allowShiftPi=true
+  }
+
+
+
+}
+
+
+slidePi(sliderPi,sliderItemsPi,prevPi,nextPi)
+
+function setWidthPi(){
+  var piSlides= document.getElementsByClassName('slide_pi'),
+  piSlideSize = document.getElementsByClassName('wrapper_pi')[0].offsetWidth;
+  
+
+  Array.from(piSlides).forEach(function(item){
+    item.style.width = piSlideSize + 'px';
+  })
+
+  document.getElementById('slides_pi').style.left = - piSlideSize + 'px'
+}
+
+ window.addEventListener('resize',setWidthPi);
+
+
+// Latest News Pinhas 
+
+var slider_flo = document.getElementById('slider_flo'),
+  sliderItemsflo = document.getElementById('slides_flo')
+  prevFlo= document.getElementById('right_click')
+  nextFlo = document.getElementById('left_click')
+
+var slideSizeFlo = document.getElementsByClassName('wrapper_flo')[0].offsetWidth,
+
+  posInitialFlo,
+  indexFlo = 0;
+
+
+function slideFlo (wrapFlo, itms, prvv, nxtt){
+
+  var posXx1 = 0,
+    posXx2 = 0,
+    posFinalFlo,
+    thresholdFlo = 100,
+    slides_F = itms.getElementsByClassName('slide_flo'),
+
+    slidesLengthFlo = slides_F.length,
+
+    firstSlideflo = slides_F[0],
+    lastSlideFlo = slides_F[slidesLengthFlo -1],
+    cloneFirstFlo = firstSlideflo.cloneNode(true),
+    cloneLastFlo = lastSlideFlo.cloneNode(true),
+    allowShiftFlo = true;
+
+    item1Lenth = document.getElementsByClassName('item1')[0].offsetWidth + 40,
+    itemNombre = document.getElementsByClassName('item1').length
+  console.log(itemNombre)
+
+
+
+  // clone first and Last slide 
+
+  itms.appendChild(cloneFirstFlo);
+  itms.insertBefore(cloneLastFlo,firstSlideflo)
+   console.log(slides_F)
+
+
+  //  All Mouse and Event here ...Start
+
+  itms.onmousedown = dragStartFlo;
+
+  // touch event 
+
+  itms.addEventListener("touchstart", dragStartFlo);
+  itms.addEventListener("touchend", dragEndFlo);
+  itms.addEventListener("touchmove", dragActionFlo);
+
+
+  //  All Mouse and Event here ...End 
+
+  // Event click 
+
+  prvv.addEventListener('click',function(){
+    shiftSlideflo(-1)
+  })
+
+  nxtt.addEventListener('click',function(){
+    shiftSlideflo(1)
+  })
+
+  itms.addEventListener('transitionend', checkindexFlo);
+
+  setWidthFlo()
+  
+
+  function dragStartFlo(e){
+
+    e = e || window.event;
+
+    e.preventDefault();
+
+    posInitialFlo = itms.offsetLeft;
+
+    if (e.type == 'touchstart'){
+      posXx1 = e.touches[0].clientX;
+
+    }else {
+      posXx1 =e.clientX;
+      document.onmouseup = dragEndFlo;
+      document.onmousemove=dragActionFlo;
+    }
+
+  }
+
+  function dragActionFlo(e){
+    e = e|| window.event;
+
+    if (e.type == "touchmove" ){
+      posXx2 = posXx1 - e.touches[0].clientX;
+      posXx1 = e.touches[0].clientX;
+
+    } else {
+      posXx2 = posXx1 - e.clientX;
+      posXx1= e.clientX;
+    }
+
+    itms.style.left = itms.offsetLeft - posXx2 + 'px';
+
+  }
+
+
+  function dragEndFlo(e){
+    posFinalFlo = itms.offsetLeft;
+
+    if (posFinalFlo - posInitialFlo < - thresholdFlo){
+      shiftSlideflo (1,'drag');
+
+    } else if (posFinalFlo - posInitialFlo > thresholdFlo){
+      shiftSlideflo(-1, 'drag')
+    }else{
+      itms.style.left = posInitialFlo + 'px'
+    }
+
+    document.onmouseup =null;
+    document.onmousemove = null;
+  }
+   
+
+  function shiftSlideflo(dir, action){
+    itms.classList.add('shifting')
+
+    if (allowShiftFlo){
+
+      if (!action){
+        posInitialFlo = itms.offsetLeft;
+      }
+
+      if (dir == 1){
+        itms.style.left = posInitialFlo - item1Lenth + 'px';
+        indexFlo ++;
+
+      }
+
+      if (dir == -1){
+        itms.style.left= posInitialFlo + item1Lenth + 'px';
+        indexFlo--;
+      }
+    }
+
+    allowShiftFlo = false
+  }
+
+
+  function checkindexFlo (){
+    itms.classList.remove('shifting');
+
+    
+
+    if (indexFlo == -1 ){
+      itms.style.left = -(itemNombre * slideSizeFlo) + 'px';
+      indexFlo=itemNombre-1;
+      
+    }
+
+    if (indexFlo == itemNombre){
+      itms.style.left = -(1* slideSizeFlo) + 'px';
+      indexFlo=0
+      
+    }
+
+    allowShiftFlo=true
+  }
+  
+
+}
+
+
+slideFlo(slider_flo, sliderItemsflo , prevFlo, nextFlo)
+
+
+function setWidthFlo(){
+  var floSlides = document.getElementsByClassName('slide_flo'),
+   floSlideSize = document.getElementsByClassName('wrapper_flo')[0].offsetWidth;
+
+
+  Array.from(floSlides).forEach(function(item){
+    item.style.width = floSlideSize + 'px';
+  })
+
+  document.getElementById('slides_flo').style.left = -floSlideSize + "px";
+}
+
+//window.addEventListener('resize',setWidthFlo);
+
+
+
+
+
+
+
+
+
