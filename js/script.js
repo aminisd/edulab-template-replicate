@@ -267,6 +267,9 @@ function slide(wrapper, items, prev, next) {
     document.onmousemove = null;
   }
 
+
+
+
   function shiftSlide(dir, action) {
     items.classList.add("shifting");
 
@@ -452,55 +455,44 @@ function dragEndPi (e){
     itemss.classList.add('shifting')
    
     if (allowShiftPi){
-
-     
+ 
       if (!action){
         posInitialPi = itemss.offsetLeft;
-        console.log('sdfsdfsdf')
-   
+     
       }
-
       if (dir == 1 ){
         itemss.style.left = posInitialPi - caretMesure + 'px';
         indexPi++;
-        console.log(posInitialPi ,'1')
-
+        
+      
       } else if (dir == -1){
-        itemss.style.left= posInitialPi + caretMesure + 'px';
+        itemss.style.left = posInitialPi + caretMesure + 'px';
         indexPi--;
-        console.log(posInitialPi, '-1')
-
-    
+        console.log(indexPi)
       }
     }
     allowShiftPi = false
   }
 
- 
-
   function checkindexPi (){
-    console.log('dimanche')
+   
+
     itemss.classList.remove('shifting');
+    
 
     if (indexPi == -1){
-      itemss.style.left = -( cartLenth  * slidesizePi) + 'px';
-      indexPi =  cartLenth  - 1;
-      console.log(indexPi)
-      
-    }
+      itemss.style.left = -( cartLenth * slidesizePi) + 'px';
 
+      indexPi =  cartLenth - 1;
+    }
 
     if (indexPi == cartLenth){
+    
       itemss.style.left = -(1 * slidesizePi) + 'px';
-      indexPi =0 
-      
+      indexPi =0
     }
-
     allowShiftPi=true
   }
-
-
-
 }
 
 
@@ -521,7 +513,14 @@ function setWidthPi(){
  window.addEventListener('resize',setWidthPi);
 
 
-// Latest News Pinhas 
+
+
+
+
+
+
+
+ // Latest News Pinhas 
 
 var slider_flo = document.getElementById('slider_flo'),
   sliderItemsflo = document.getElementById('slides_flo')
@@ -656,42 +655,35 @@ function slideFlo (wrapFlo, itms, prvv, nxtt){
       if (dir == 1){
         itms.style.left = posInitialFlo - item1Lenth + 'px';
         indexFlo ++;
-
+        //console.log(indexFlo)
       }
 
       if (dir == -1){
         itms.style.left= posInitialFlo + item1Lenth + 'px';
         indexFlo--;
+        console.log(indexFlo)
       }
     }
 
     allowShiftFlo = false
   }
 
-
   function checkindexFlo (){
-    itms.classList.remove('shifting');
 
-    
+    itms.classList.remove('shifting');
 
     if (indexFlo == -1 ){
       itms.style.left = -(itemNombre * slideSizeFlo) + 'px';
-      indexFlo=itemNombre-1;
-      
+      indexFlo =itemNombre-1;   
     }
 
     if (indexFlo == itemNombre){
       itms.style.left = -(1* slideSizeFlo) + 'px';
-      indexFlo=0
-      
+      indexFlo=0   
     }
-
     allowShiftFlo=true
   }
-  
-
 }
-
 
 slideFlo(slider_flo, sliderItemsflo , prevFlo, nextFlo)
 
@@ -708,7 +700,7 @@ function setWidthFlo(){
   document.getElementById('slides_flo').style.left = -floSlideSize + "px";
 }
 
-//window.addEventListener('resize',setWidthFlo);
+window.addEventListener('resize',setWidthFlo);
 
 
 

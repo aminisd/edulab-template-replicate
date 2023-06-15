@@ -2162,6 +2162,15 @@ textarea {
   font-size: 50px;
   cursor: pointer;
   color: #000000;
+ 
+}
+
+.all_btns .left {
+  margin-left: 10px;
+}
+
+.all_btns .right {
+  margin-right: 10px;
 }
 
 
@@ -2169,16 +2178,20 @@ textarea {
 
   position: relative;
   width: 100%;
-  height: 500px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  height: 700px;
+}
 
+#slider_pi h2{
+  margin: 35px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .wrapper_pi{
-  overflow: hidden; 
+  overflow: hidden;  
   position: relative;
   width: 100%;
-  height: 500px;
+
   z-index: 1;
 }
 
@@ -2187,6 +2200,7 @@ textarea {
   position: relative;
   top: 0;
   width: 20000px;
+;
 }
 
 
@@ -2212,14 +2226,75 @@ textarea {
   display:  flex;
   justify-content: space-around;
   align-items: center;
+ 
 
 
 }
 
 .carte{
   width: 400px;
-  height: 200px;
-  border: 5px solid yellow;
+  height: 450px;
+  position: relative;
+  border: 1px solid black;
+  background-image: url('../assets/img/course-pic.jpg');
+  background-size: 100% 50%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 65%;
+  font-size: 15px;
+}
+
+.text p{
+  text-align: start;
+  margin: 5px;
+}
+
+.txt{
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 65%;
+  font-size: 15px;
+}
+
+.txt p{
+  text-align: start;
+  margin: 5px;
+}
+
+.tst{
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 65%;
+  font-size: 15px;
+}
+
+.tst p{
+  text-align: start;
+  margin: 5px;
+}
+
+.green{
+  background-color: #00944f;
+  margin-top: 50%;
+  height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.green p{
+
+  color: white;
+  margin: 5px;
+  font-size: 20px;
+  
 }
 
 
@@ -2229,19 +2304,20 @@ textarea {
 
   position: relative;
   width: 100%;
-  height: 600px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  height: 700px;
+
 }
+
 
 .wrapper_flo{
 
    overflow: hidden;  
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 550px;
     z-index: 1;
-
 }
+
 
 .slides_flo{
   display: flex;
@@ -2251,7 +2327,7 @@ textarea {
 }
 
 .slide_flo{
-  height: 500px;
+  height: 600px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -2267,9 +2343,19 @@ textarea {
 .all_click{
   display: flex;
   justify-content: center;
-  font-size: 50px;
   cursor: pointer;
   color: #000000;
+
+}
+
+.right_click {
+  margin-right: 20px;
+  
+}
+
+.left_click {
+  margin-left: 20px;
+  
 }
 
 .sliderHouse{
@@ -2277,13 +2363,17 @@ textarea {
   justify-content: space-around;
   align-items: center;
   gap: 30px;
+  margin-bottom: 170px;
 }
 
 .item1{
-
-  border: 4px solid yellow;
-  width: 600px;
-  height: 200px;
+  position: relative;
+  width: 630px;
+  height: 360px;
+  background-image: url('../assets/img/latest-new-img.jpg');
+  background-size: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
 }
 
 
@@ -2291,5 +2381,45 @@ textarea {
   transition: left 0.4s ease-out;
 }
 
+.grid{
+  background-color: white;
+  height: 175px;
+  margin-top: 35%;
+  margin-left: 10px ;
+  margin-right: 10px;
+  display: grid;
+  justify-content: start;
+}
+
+.grid h1{
+
+  font-size: 20px; 
+  margin-top: 20px;
+  margin-right: 20px;
+  text-align: left;
+  padding: 19px;
+}
+
+.grid  h1 span{
+  font-weight: bold;
+  font-size: 25px;
+
+}
 
 
+.grid p{
+  font-size: 15px;
+  text-align: left;
+  padding: 15px;
+  font-size: 15px;
+}
+
+#slider_pi h2 {
+  margin: 35px;
+  text-align: center;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 40px;
+  
+}
