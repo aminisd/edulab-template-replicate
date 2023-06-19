@@ -2389,6 +2389,7 @@ textarea {
   margin-right: 10px;
   display: grid;
   justify-content: start;
+  border: 1px solid black;
 }
 
 .grid h1{
