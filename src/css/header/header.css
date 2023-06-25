@@ -1,0 +1,143 @@
+
+header {
+    position: sticky;
+    width: 100%;
+    min-height: 66px;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    color: black;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+header .logo {
+    max-width: 100px;
+    text-decoration: none;
+}
+
+header ul {
+    position: relative;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+    float: left;
+}
+
+header ul li a {
+    color: black;
+    font-size: 1.1em;
+    padding: 20px 18px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul li a:hover {
+    background: #cdd4d9;
+}
+
+header ul li ul {
+    position: absolute;
+    left: 0;
+    width: 180px;
+    background-color: #f4f1f1;
+    display: none;
+}
+
+header ul li:hover > ul {
+    display: block;
+}
+
+header ul li ul li {
+    position: relative;
+    width: 100%;
+
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+header ul li ul li a {
+    color: #3a3a3a;
+}
+header ul li ul li ul {
+    top: 0;
+    left: 140px;
+}
+
+/* hamburger menu bar for the navbar */
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-color: rgb(16, 14, 14);
+}
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+.fa-angle-down {
+    padding: 4px 5px;
+}
+/* begining of media querries */
+@media screen and (max-width: 940px) {
+    header {
+        position: sticky;
+        width: 100%;
+        min-height: 66px;
+        padding: 0 40px;
+    }
+}
+@media screen and (max-width: 810px) {
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    header {
+        padding: 10px 20px;
+    }
+    header nav ul li a {
+        color: #3a3a3a;
+    }
+    header nav {
+        z-index: 999;
+        position: absolute;
+        width: 100%;
+        top: 66px;
+        left: 0;
+        background: #ffff;
+        display: none;
+        transition: all 5s ease-in-out;
+    }
+    .Navheader.active nav {
+        display: initial;
+        transition: all 5s ease-in-out;
+    }
+    header nav ul li {
+        width: 100%;
+    }
+    header nav ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    header ul li ul li ul {
+        top: 0;
+        left: 0;
+        color: #3a3a3a;
+    }
+}
