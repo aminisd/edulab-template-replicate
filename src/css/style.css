@@ -6,73 +6,9 @@
 
 /* Header */
 @import './header/header.css';
-/* responsive navbar css part */
-
 
 /* info-bar */
-
-.infor-bar-container {
-    left: 0;
-    border: solid;
-    width: 100%;
-    padding: 25px;
-    background-color: rgba(7, 7, 66, 0.959);
-}
-
-.lis-logos ul li {
-    padding-right: 15px;
-    cursor: pointer;
-    font-size: 10px;
-}
-
-.contact {
-    font-size: 12px;
-    cursor: pointer;
-    padding-bottom: 20px;
-}
-
-.contact ul li i {
-    font-size: 10px;
-}
-
-.contact-phone {
-    font-size: 13px;
-    cursor: pointer;
-    padding-bottom: 20px;
-}
-
-.login {
-    font-size: 15px;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 770px) {
-    .contact {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: small;
-    }
-
-    .login {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .contact-phone {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .lis-logos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 10px;
-    }
-}
+@import './info-bar/info-bar.css';
 
 /* slider  */
 
