@@ -7,8 +7,13 @@ module.exports = {
         // Configure Snowpack's rollupOptions to create a single entry point
         rollupOptions: {
             input: {
-                main: './src/js/main.js',
+                main: './src/js/script.js',
             },
         },
+    },
+    optimize: {
+      bundle: true,
+      minify: true,
+      target: 'es2018',
     },
 };
