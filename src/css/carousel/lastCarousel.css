@@ -1,0 +1,244 @@
+/* Fix : Pinhas will seperate them */
+
+.all_btns {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    cursor: pointer;
+    color: #000000;
+}
+
+.all_btns .left {
+    margin-left: 10px;
+}
+
+.all_btns .right {
+    margin-right: 10px;
+}
+
+.slider_pi {
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+
+#slider_pi h2 {
+    margin: 35px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.wrapper_pi {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    z-index: 1;
+}
+
+.slides_pi {
+    display: flex;
+    position: relative;
+    top: 0;
+    width: 20000px;
+}
+
+.shifting {
+    transition: left 0.4s ease-out;
+}
+
+.slide_pi {
+    height: 500px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 1s;
+    position: relative;
+
+    border-radius: 2px;
+    text-align: center;
+}
+
+.las_slide {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.carte {
+    width: 400px;
+    height: 450px;
+    position: relative;
+    border: 1px solid black;
+    background-image: url('../../assets/img/course-pic.jpg');
+    background-size: 100% 50%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 65%;
+    font-size: 15px;
+}
+
+.text p {
+    text-align: start;
+    margin: 5px;
+}
+
+.txt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 65%;
+    font-size: 15px;
+}
+
+.txt p {
+    text-align: start;
+    margin: 5px;
+}
+
+.tst {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 65%;
+    font-size: 15px;
+}
+
+.tst p {
+    text-align: start;
+    margin: 5px;
+}
+
+.green {
+    background-color: #00944f;
+    margin-top: 50%;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.green p {
+    color: white;
+    margin: 5px;
+    font-size: 20px;
+}
+
+/*  Latest News  */
+
+.slider_flo {
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+
+.wrapper_flo {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 550px;
+    z-index: 1;
+}
+
+.slides_flo {
+    display: flex;
+    position: relative;
+    top: 0;
+    width: 20000px;
+}
+
+.slide_flo {
+    height: 600px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 1s;
+    position: relative;
+
+    border-radius: 2px;
+    text-align: center;
+}
+
+.all_click {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    color: #000000;
+}
+
+.right_click {
+    margin-right: 20px;
+}
+
+.left_click {
+    margin-left: 20px;
+}
+
+.sliderHouse {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 170px;
+}
+
+.item1 {
+    position: relative;
+    width: 630px;
+    height: 360px;
+    background-image: url('../../assets/img/latest-new-img.jpg');
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.shifting {
+    transition: left 0.4s ease-out;
+}
+
+.grid {
+    background-color: white;
+    height: 175px;
+    margin-top: 35%;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    justify-content: start;
+    border: 1px solid black;
+}
+
+.grid h1 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: left;
+    padding: 19px;
+}
+
+.grid h1 span {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.grid p {
+    font-size: 15px;
+    text-align: left;
+    padding: 15px;
+    font-size: 15px;
+}
+
+#slider_pi h2 {
+    margin: 35px;
+    text-align: center;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 40px;
+}
