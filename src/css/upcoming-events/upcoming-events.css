@@ -1,0 +1,298 @@
+.upcoming-events {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 30px;
+}
+
+.upcoming-nested {
+    display: flex;
+    padding: 50px 40px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+/* .upcoming-nested img {
+  margin: 2px 80px;
+} */
+
+.img-container {
+    background-image: url('../../assets/img/events.jpg');
+    background-size: 75%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    padding: 40px 0px;
+    height: 100%;
+}
+
+.nested-upcontent h3 {
+    color: #1c3961;
+    font-size: 18px;
+    margin: 0px 19px;
+    padding-top: 15px;
+}
+.nested-upcontent p {
+    color: #585858;
+    font-size: 14px;
+    margin: 14px;
+}
+
+.nested-upcontent h4 {
+    color: #404040;
+    font-size: 14px;
+    margin: 0px 19px;
+    padding-bottom: 15px;
+}
+.nested-upcontent h4 .fa-solid {
+    padding-right: 4px;
+}
+
+.nested-upcontent {
+    width: 55%;
+    float: right;
+    align-self: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+/* media query */
+
+@media screen and (max-width: 1214px) {
+    .upcoming-events {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 20px;
+    }
+
+    .upcoming-nested {
+        display: flex;
+        padding: 30px 40px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+    .img-container {
+        background-image: url('../../assets/img/events.jpg');
+        background-size: 75%;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        padding: 30px 0px;
+        height: 100%;
+    }
+
+    .nested-upcontent {
+        width: 50%;
+        float: right;
+        align-self: center;
+        justify-content: center;
+        background-color: #fff;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+
+    .nested-upcontent h3 {
+        color: #1c3961;
+        font-size: 12px;
+        margin: 0px 8px;
+        padding-top: 15px;
+    }
+    .nested-upcontent p {
+        color: #585858;
+        font-size: 10px;
+        margin: 8px;
+        padding: 14px 0px;
+    }
+
+    .nested-upcontent h4 {
+        color: #404040;
+        font-size: 10px;
+        margin: 0px 8px;
+        padding-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .img-container {
+        background-image: url('../../assets/img/events.jpg');
+        background-size: 100%;
+        object-fit: cover;
+        background-repeat: no-repeat;
+
+        padding-top: 160px;
+        height: 100%;
+    }
+
+    .nested-upcontent {
+        margin: 30px auto;
+        width: 80%;
+        float: none;
+        bottom: 10px;
+    }
+
+    .nested-upcontent h3 {
+        color: #1c3961;
+        font-size: 16px;
+        margin: 0px 10px;
+        padding-top: 15px;
+    }
+    .nested-upcontent p {
+        color: #585858;
+        font-size: 12px;
+        margin: 8px;
+        padding: 14px 0px;
+    }
+
+    .nested-upcontent h4 {
+        color: #404040;
+        font-size: 14px;
+        margin: 0px 8px;
+        padding-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .upcoming-nested {
+        display: flex;
+        padding: 40px 60px;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .img-container {
+        background-image: url('../../assets/img/events.jpg');
+        background-size: 100%;
+        object-fit: cover;
+        background-repeat: no-repeat;
+
+        padding-top: 50%;
+        height: 100%;
+    }
+
+    .nested-upcontent {
+        margin: 30px auto;
+        width: 80%;
+        float: none;
+        bottom: 10px;
+    }
+
+    .nested-upcontent h3 {
+        color: #1c3961;
+        font-size: 16px;
+        margin: 0px 10px;
+        padding-top: 15px;
+    }
+    .nested-upcontent p {
+        color: #585858;
+        font-size: 12px;
+        margin: 8px;
+        padding: 14px 0px;
+    }
+
+    .nested-upcontent h4 {
+        color: #404040;
+        font-size: 14px;
+        margin: 0px 8px;
+        padding-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 606px) {
+    .upcoming-nested {
+        display: flex;
+        padding: 20px 60px;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .img-container {
+        background-image: url('../../../assets/img/events.jpg');
+        background-size: 100%;
+        object-fit: cover;
+        background-repeat: no-repeat;
+
+        padding-top: 45%;
+        height: 100%;
+    }
+
+    .nested-upcontent {
+        margin: 10px auto;
+        width: 80%;
+        float: none;
+        bottom: 0px;
+    }
+
+    .nested-upcontent h3 {
+        color: #1c3961;
+        font-size: 16px;
+        margin: 0px 10px;
+        padding-top: 15px;
+    }
+    .nested-upcontent p {
+        color: #585858;
+        font-size: 12px;
+        margin: 8px;
+        padding: 14px 0px;
+    }
+
+    .nested-upcontent h4 {
+        color: #404040;
+        font-size: 14px;
+        margin: 0px 8px;
+        padding-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .upcoming-nested {
+        display: flex;
+        padding: 10px 60px;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .img-container {
+        background-image: url('../../assets/img/events.jpg');
+        background-size: 100%;
+        object-fit: cover;
+        background-repeat: no-repeat;
+
+        padding-top: 20%;
+        height: 100%;
+    }
+
+    .nested-upcontent {
+        margin: 10px auto;
+        width: 100%;
+        float: none;
+        bottom: 10px;
+        background: rgba(0, 0, 0, 0.16);
+    }
+
+    .nested-upcontent h3 {
+        /* color: #1c3961; */
+        color: white;
+        font-size: 16px;
+        margin: 0px 10px;
+        padding-top: 15px;
+    }
+    .nested-upcontent p {
+        /* color: #585858; */
+        color: white;
+        font-size: 12px;
+        margin: 8px;
+        padding: 14px 0px;
+    }
+
+    .nested-upcontent h4 {
+        color: #404040;
+        font-size: 14px;
+        margin: 0px 8px;
+        padding-bottom: 8px;
+    }
+}
