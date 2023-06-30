@@ -56,7 +56,7 @@
 
         <!-- navbar begins -->
         <header class="Navheader">
-            <a href="#" class="logo"> <img src="./assets/img/site-logo.jpg" alt="logo" /></a>
+            <a href="#" class="logo"> <img src="./assets/img/site-logo.jpg" alt="Logo for edulad : Welcome to edulab" /></a>
             <nav>
                 <ul>
                     <li class="nav-links"><a href="#">Home</a></li>
@@ -258,7 +258,7 @@
             </div>
 
             <div class="popup-image">
-                <img src="/assets/img/gallery-img1.jpg" />
+                <img src="/assets/img/gallery-img1.jpg" alt="This alt text should be dynamic." />
                 <span>&times;</span>
 
                 <i class="fa-solid fa-angle-right" id="btn-right"></i>
@@ -418,9 +418,10 @@
                     <div class="f-last">
                         <h3 class="f-titles">Quick Contact</h3>
                         <p class="hr-header"></p>
-                        <input type="text" placeholder="Your email*" class="f-input" />
-                        <textarea cols="2" rows="4" placeholder="Type your message" class="f-input"></textarea>
-
+                        <label class="hidden" for="email">Enter your email : </label>
+                        <input id="email" type="text" placeholder="Your email*" class="f-input" />
+                        <label class="hidden" for="message">Enter your message :</label>
+                        <textarea id="message" cols="2" rows="4" placeholder="Type your message" class="f-input"></textarea>
                         <input type="submit" value="SEND MESSAGE" class="f-btn" />
                     </div>
                 </div>

@@ -30,4 +30,9 @@
 @import './gallery/gallery.css';
 
 /* footer */
-@import './footer/footer.css'
+@import './footer/footer.css';
+
+
+.hidden {
+    visibility: hidden;
+}
