@@ -85,7 +85,7 @@ function slideFlo(wrapFlo, itms, prvv, nxtt) {
         itms.style.left = itms.offsetLeft - posXx2 + 'px';
     }
 
-    function dragEndFlo(e) {
+    function dragEndFlo() {
         posFinalFlo = itms.offsetLeft;
 
         if (posFinalFlo - posInitialFlo < -thresholdFlo) {

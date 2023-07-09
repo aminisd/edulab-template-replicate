@@ -77,7 +77,7 @@ function slide(wrapper, items, prev, next) {
         items.style.left = items.offsetLeft - posX2 + 'px';
     }
 
-    function dragEnd(e) {
+    function dragEnd() {
         posFinal = items.offsetLeft;
         if (posFinal - posInitial < -threshold) {
             shiftSlide(1, 'drag');

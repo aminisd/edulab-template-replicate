@@ -87,7 +87,7 @@ function slidePi(wraper, itemss, prevv, nextt) {
         itemss.style.left = itemss.offsetLeft - posiX2pi + 'px';
     }
 
-    function dragEndPi(e) {
+    function dragEndPi() {
         posFinalPi = itemss.offsetLeft;
 
         if (posFinalPi - posInitialPi < -thresholdPi) {
