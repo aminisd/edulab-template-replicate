@@ -92,8 +92,6 @@ P.S : This project is just for practice, snowpack is no longer maintained so we 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-
-
 ### Prerequisites
 
 One prerequesite to start this project is having NPM installed on your machine; if you do not have npm already installed, use this command bellow.
@@ -103,8 +101,6 @@ One prerequesite to start this project is having NPM installed on your machine; 
   ```
 
 ### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Clone the repo
    ```sh
@@ -126,13 +122,7 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-
-
-
-
-
+Distributed under the MIT License. See `LICENCE` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
