@@ -80,9 +80,8 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [![html][html-logo]][html-url]
 * [![Js][js-logo]][js-url]
 * [![Vue][css-logo]][css-url]
-* [![Snowpack][snowpack-logo]][snowpack-url]
+* [![Vite][vite-logo]][vite-url]
 
-P.S : This project is just for practice, snowpack is no longer maintained so we suggest you use something like vite.
 
 <!-- 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
@@ -147,5 +146,5 @@ Distributed under the MIT License. See `LICENCE` for more information.
 [js-logo]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
 [js-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
-[snowpack-logo]: https://img.shields.io/badge/snowpack-000000?style=for-the-badge&logo=snowpack&logoColor=white
-[snowpack-url]: https://www.snowpack.dev/te
+[vite-logo]: https://img.shields.io/badge/vite-5d5d5d?style=for-the-badge&logo=vite&logoColor=white
+[vite-url]: https://vitejs.dev/

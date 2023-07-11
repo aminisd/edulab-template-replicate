@@ -1,5 +1,8 @@
 // Main javascript file.
 
+// import the style sheet
+import '../css/style.css';
+
 // responsive navbar javascript part
 import './navbar/navbar';
 

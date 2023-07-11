@@ -4,8 +4,8 @@
     "description": "A simple website skeleton using using html , javascript and bootstrap.",
     "main": "index.js",
     "scripts": {
-        "dev": "snowpack dev",
-        "build": "snowpack build",
+        "dev": "vite dev",
+        "build": "vite build",
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint" : "./node_modules/.bin/eslint  src/"
     },
@@ -13,7 +13,6 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "eslint": "^8.43.0",
-        "snowpack": "^3.8.8"
+        "eslint": "^8.43.0"
     }
 }
