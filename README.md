@@ -19,7 +19,7 @@
     <a href="https://github.com/aminisd/edulab-template-replicate"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/aminisd/edulab-template-replicate">View Demo</a>
+    <a href="https://edulab-template-replicate.s3.amazonaws.com/index.html">View Demo</a>
     ·
     <a href="https://github.com/aminisd/edulab-template-replicate/issues">Report Bug</a>
     ·
@@ -82,7 +82,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [![Vue][css-logo]][css-url]
 * [![Snowpack][snowpack-logo]][snowpack-url]
 
-P.S : This project is just for practice, snowpack is no longer maintained so we suggest you use something like vite.
+P.S : This project is just for practice, snowpack is no longer maintained so we suggest you use something like vite. <a href="https://github.com/aminisd/edulab-template-replicate/tree/vite">Here</a> is the edulab project inmplemented with vite.
 
 <!-- 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
