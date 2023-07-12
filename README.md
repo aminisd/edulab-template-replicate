@@ -58,7 +58,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-This a project where I wanted to test my management and collaborative skills. When it comes to the UI, it is a project that was picked based on the features it had. From responsive navb to carousels. You can find the original project <a href="https://www.free-css.com/free-css-templates/page275/edulab">here</a>.
+This a project where I wanted to test my management and collaborative skills. When it comes to the UI, it is a project that was picked based on the features it had. From responsive navbar to carousels. You can find the original project <a href="https://www.free-css.com/free-css-templates/page275/edulab">here</a>.
 
 <!-- Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
@@ -75,7 +75,7 @@ Use the `BLANK_README.md` to get started. -->
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+Here is the list of technologies that were used in this project.
 
 * [![html][html-logo]][html-url]
 * [![Js][js-logo]][js-url]
