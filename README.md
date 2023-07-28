@@ -1,4 +1,6 @@
 <!-- This is a readme based of of https://github.com/othneildrew/Best-README-Template /-->
+This project is still in testing and development process. Please report an issue or a bug if you find one.
+
 [![Contributors][contributors-shield]][contributors-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
